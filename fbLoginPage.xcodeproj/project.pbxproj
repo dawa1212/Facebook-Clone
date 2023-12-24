@@ -20,6 +20,8 @@
 		35E73E1C2B380E350085E481 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E73E1B2B380E350085E481 /* LoginView.swift */; };
 		35E73E1E2B3810200085E481 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E73E1D2B3810200085E481 /* HomeController.swift */; };
 		35EC63F42B382A7100405D00 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC63F32B382A7100405D00 /* UIViewController+Extension.swift */; };
+		35EC63F72B382BDA00405D00 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC63F62B382BDA00405D00 /* SignUpScreen.swift */; };
+		35EC63FA2B38335400405D00 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC63F92B38335400405D00 /* TextField.swift */; };
 		8CFB69F73FACE5FD2907072C /* Pods_fbLoginPage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EAB9AA7245CD433D9AF756 /* Pods_fbLoginPage.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		35E73E1B2B380E350085E481 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		35E73E1D2B3810200085E481 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		35EC63F32B382A7100405D00 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		35EC63F62B382BDA00405D00 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		35EC63F92B38335400405D00 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		C0EAB9AA7245CD433D9AF756 /* Pods_fbLoginPage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fbLoginPage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3CE6E0413A109F629B5A43 /* Pods-fbLoginPage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbLoginPage.release.xcconfig"; path = "Target Support Files/Pods-fbLoginPage/Pods-fbLoginPage.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +63,7 @@
 		3542D1862B37E318008F6E3D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				35EC63F92B38335400405D00 /* TextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -116,7 +121,6 @@
 		358C46712B0F5A6D009966B8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				358C466D2B0F3926009966B8 /* SignUpController.swift */,
 				358C466B2B0F132A009966B8 /* AnimalDetailViewController.swift */,
 				358C466F2B0F4E59009966B8 /* ForgetPasswordController.swift */,
 				358C46722B0F7B6C009966B8 /* AccountCheckingController.swift */,
@@ -128,6 +132,7 @@
 		35EC63F02B38288A00405D00 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				35EC63F52B382B7900405D00 /* SignUp */,
 				35EC63F12B38289900405D00 /* login */,
 			);
 			path = Module;
@@ -149,6 +154,15 @@
 				35EC63F32B382A7100405D00 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		35EC63F52B382B7900405D00 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				358C466D2B0F3926009966B8 /* SignUpController.swift */,
+				35EC63F62B382BDA00405D00 /* SignUpScreen.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		A9B5D33812DB190EC9817DC5 /* Pods */ = {
@@ -287,12 +301,14 @@
 				358C466E2B0F3926009966B8 /* SignUpController.swift in Sources */,
 				358C466C2B0F132A009966B8 /* AnimalDetailViewController.swift in Sources */,
 				358C464A2B0E0794009966B8 /* AppDelegate.swift in Sources */,
+				35EC63FA2B38335400405D00 /* TextField.swift in Sources */,
 				35E73E1E2B3810200085E481 /* HomeController.swift in Sources */,
 				35E73E1C2B380E350085E481 /* LoginView.swift in Sources */,
 				358C46732B0F7B6C009966B8 /* AccountCheckingController.swift in Sources */,
 				3542D18D2B37F5D5008F6E3D /* LoginViewModel.swift in Sources */,
 				358C46702B0F4E59009966B8 /* ForgetPasswordController.swift in Sources */,
 				358C464C2B0E0794009966B8 /* SceneDelegate.swift in Sources */,
+				35EC63F72B382BDA00405D00 /* SignUpScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
