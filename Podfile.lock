@@ -1,0 +1,20 @@
+PODS:
+  - LBTAComponents (1.1)
+  - LBTATools (1.0.12)
+
+DEPENDENCIES:
+  - LBTAComponents
+  - LBTATools
+
+SPEC REPOS:
+  trunk:
+    - LBTAComponents
+    - LBTATools
+
+SPEC CHECKSUMS:
+  LBTAComponents: 2e7719683ddcf1cdf7280700438c0c6a5f7da550
+  LBTATools: 389a901a01b9a56bea5682c40cd6e23530f40015
+
+PODFILE CHECKSUM: 3d5f099af034d60fc7afea2d2b0b42e2336aee5d
+
+COCOAPODS: 1.14.3

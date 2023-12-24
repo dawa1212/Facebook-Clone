@@ -1,0 +1,6 @@
+framework module Pods_fbLoginPage {
+  umbrella header "Pods-fbLoginPage-umbrella.h"
+
+  export *
+  module * { export * }
+}

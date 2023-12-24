@@ -1,0 +1,905 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B62441058D5662141C3729FA1B0AB02 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9F3341FF3A143C9276ADC63BB1736 /* UIButton.swift */; };
+		0CA63E855542AB1B4A2AE56FB3DBE28D /* LBTATools-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B8BB84BB7C3F5EC8C2E2EB5B10CDE3 /* LBTATools-dummy.m */; };
+		0E7E58141CE3791650728E18DE4C697C /* NSMutableAttributedString+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B277EF13A82F09BA347D00171E32083 /* NSMutableAttributedString+Helper.swift */; };
+		0EB5C2FB858BA7797C59CCBDEDD851C2 /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070578B74F05FB17D181C626932AFB09 /* CachedImageView.swift */; };
+		118F739EE87877166CB87621F9EA3A99 /* LBTAListHeaderFooterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB2F3A006943989B2E341C61F4A5B90 /* LBTAListHeaderFooterController.swift */; };
+		19EAA425F57998A767938E00930FB6BC /* AspectFitImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A45D2D56DBF736AF41927E9F66F563 /* AspectFitImageView.swift */; };
+		1E0227B52F8717D69235169993070489 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		28A8B75D29E13DAAD3F2B6FF7E4C04AB /* LBTAComponents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ACBD60AB5E49CC99D548424E337363F5 /* LBTAComponents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2AFCEF5715367C95BD5471ACBAEC7DAB /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20E1524B077ADD86B1453589E3D7B6E /* UITextView.swift */; };
+		386BAF213EACE08324CDC982CBF13473 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FAACAB8D34FCC831A867C56FD488D5 /* UIStackView.swift */; };
+		3CAFA50BCA8A1A9CDE463093857BFDDF /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093B8F2A3F8AF8D147C1B3F4C88A215F /* UILabel.swift */; };
+		40A55DDA49C455E58209A1B7DE087083 /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19D80093148BF73172E5CC01192BF1 /* UIColor+Helpers.swift */; };
+		46E6EA7AE55CB2353C5A443E44BDF5D6 /* LBTATools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF7226CD8C66E7BCBC41CA42A0F40B /* LBTATools.swift */; };
+		493F81953741ABEA9B85A8A90D690332 /* Pods-fbLoginPage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DBECF5D9A56EABCC056A6B63E7DB8EE5 /* Pods-fbLoginPage-dummy.m */; };
+		4D853D14783D2E0F54C2C9BF015192B4 /* LBTAListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3077624D7E966683C33DCF4CCA1883 /* LBTAListCell.swift */; };
+		4F6C78A9A018098D6359352C0ABE1474 /* LBTAListHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA03E993E5E6F4423A077350ED9A24AE /* LBTAListHeaderController.swift */; };
+		530B4C93784AD06D2ACC257BFA5AC2CE /* UIButton+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8259D3281D1FCFA6AC8EB80C55795AE2 /* UIButton+Helper.swift */; };
+		5707556E127544250704441741A4CF1D /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90FED0EB0D8AD664F66AB142E3D090A /* UIView+Anchors.swift */; };
+		5A36F1C582D8D2F781B96B14A26BA66E /* UITextField+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11E93B37F3711570F9A86D9159B57DE /* UITextField+Tools.swift */; };
+		5B70E889E63961619BCDD935A148C927 /* DatasourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EBB9F28D69E60669A683057F964052 /* DatasourceCell.swift */; };
+		66E85A9FFF4F0F524E059B221E17EFC2 /* Pods-fbLoginPage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C184A6C92B5F3CB4943B6E49411EBC8 /* Pods-fbLoginPage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		789A2AF3A7A0144E98233EE5FC5DDE5C /* LBTAListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9EFC1EED1D8E18EBEC1555535F1A68 /* LBTAListController.swift */; };
+		81C0C282EEA7314F8AF4326B49CF2E9E /* LBTATools-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F36123FDED0DE4A89CD5A8A4A466F780 /* LBTATools-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8204D8D1825937A253CB03EE28C4FEDE /* DiscardableImageCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6818BF6E380CDCBBD78682515EEF4 /* DiscardableImageCacheItem.swift */; };
+		954FEB241042B00CD661EB5CFA0A0ED6 /* LBTALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940988AAF6E25D18BD319E97D467EC2 /* LBTALabel.swift */; };
+		98F05FD76FCF63C533B0F344CAC87A7E /* LBTAFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1260053FCDBA55E80FDD56062062C /* LBTAFormController.swift */; };
+		9D2EEDDA9888A296BC1399F3FFC9ADEC /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE1560E54132B4675C9899BD57238DB /* UIImage+Helper.swift */; };
+		B361B0C46AC67AE4BDD3D70A2E5112C0 /* LBTAComponents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1FE382B9F6C3F2C91470BD8F160A4D /* LBTAComponents-dummy.m */; };
+		B6F60B3DFC27BFB1B20CDE3715DFDBC9 /* DefaultCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550E381DF5A92F9E1EABD0E4A57FAAC4 /* DefaultCells.swift */; };
+		B77B10F499EC660BDCBF15EC3EFB7B34 /* AnchoredConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE6D25161AFF6F3FB5A60970728912 /* AnchoredConstraints.swift */; };
+		BE362744205CBFCE1CB431F2F004D586 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C5C168C4C6796E08DC70480532A80C72 /* LBTATextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89339FFCDDD83B683A2B692ABD00CD0E /* LBTATextView.swift */; };
+		E05BDE3643F8277502980E104CC9B923 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E05E6E62C7A07DD9E87A07ED9C9F0172 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B22F157C6D3133E6D0D64D868B457D /* UIView+Layout.swift */; };
+		E2A1B9577FFA2F1DE11EF7F1B5FEF766 /* IndentedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693F68272949DAEB6B696A36CFD63B4 /* IndentedTextField.swift */; };
+		E52EDF3D4AFB6A4A730CBEAC49FAE7F5 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40F82A2E354E9969BB6E2C8BF51578C /* CircularImageView.swift */; };
+		E844254D210B3B593083ED90A285772C /* DatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5109FD3AA0E38747E87894976408AE30 /* DatasourceController.swift */; };
+		ED6CBBA3AF59B4C0E593001A29BA60FB /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2497696711C56DA308DFB3B7C8A55 /* Datasource.swift */; };
+		EE10A4D1207FA2DB3F739DCDF21DCCF3 /* UIView+Stacking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0ADF10120CC730C3ECBA8C35D7FE1A /* UIView+Stacking.swift */; };
+		F356EB4F1F059BF8D28EF4E974AB08FC /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7B34F49C646098EE085ABDEB5CAA2 /* UIColor+Helper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		835EEFCF317FC9BDD27D118ECFCF998A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99EAE32514CAA452AFA381A6172A1587;
+			remoteInfo = LBTATools;
+		};
+		AE9A1756998DB1658118C97AFAA0229F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 507F07FC62AFC9C6A73513E671361060;
+			remoteInfo = LBTAComponents;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		012145B2D2C5B8CC15968F762AFC576D /* Pods-fbLoginPage-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-fbLoginPage-acknowledgements.markdown"; sourceTree = "<group>"; };
+		033E34FBE4025A8E1780BE827672D6F2 /* Pods-fbLoginPage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-fbLoginPage.release.xcconfig"; sourceTree = "<group>"; };
+		05FAACAB8D34FCC831A867C56FD488D5 /* UIStackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIStackView.swift; path = Source/Extensions/UIStackView.swift; sourceTree = "<group>"; };
+		070578B74F05FB17D181C626932AFB09 /* CachedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CachedImageView.swift; path = LBTAComponents/Classes/CachedImageView.swift; sourceTree = "<group>"; };
+		093B8F2A3F8AF8D147C1B3F4C88A215F /* UILabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UILabel.swift; path = Source/Extensions/UILabel.swift; sourceTree = "<group>"; };
+		152C45454E65A60DE7F1809AB75E8C2E /* LBTAComponents-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LBTAComponents-Info.plist"; sourceTree = "<group>"; };
+		1A3077624D7E966683C33DCF4CCA1883 /* LBTAListCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LBTAListCell.swift; path = Source/ListController/LBTAListCell.swift; sourceTree = "<group>"; };
+		1B19D80093148BF73172E5CC01192BF1 /* UIColor+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Helpers.swift"; path = "Source/UIColor+Helpers.swift"; sourceTree = "<group>"; };
+		1B277EF13A82F09BA347D00171E32083 /* NSMutableAttributedString+Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSMutableAttributedString+Helper.swift"; path = "LBTAComponents/Classes/NSMutableAttributedString+Helper.swift"; sourceTree = "<group>"; };
+		2A58445EA9A70F33B0BAB22AE3A6706B /* LBTAComponents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LBTAComponents.modulemap; sourceTree = "<group>"; };
+		2AE5BAA9BA6882B686D77F60E157F23E /* LBTATools-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LBTATools-Info.plist"; sourceTree = "<group>"; };
+		465962FFE6715577F9B5EE435CC0B91C /* LBTATools.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LBTATools.modulemap; sourceTree = "<group>"; };
+		4A9EFC1EED1D8E18EBEC1555535F1A68 /* LBTAListController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LBTAListController.swift; path = Source/ListController/LBTAListController.swift; sourceTree = "<group>"; };
+		5109FD3AA0E38747E87894976408AE30 /* DatasourceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatasourceController.swift; path = LBTAComponents/Classes/DatasourceController.swift; sourceTree = "<group>"; };
+		550E381DF5A92F9E1EABD0E4A57FAAC4 /* DefaultCells.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultCells.swift; path = LBTAComponents/Classes/DefaultCells.swift; sourceTree = "<group>"; };
+		55E9F3341FF3A143C9276ADC63BB1736 /* UIButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIButton.swift; path = Source/Extensions/UIButton.swift; sourceTree = "<group>"; };
+		58B22F157C6D3133E6D0D64D868B457D /* UIView+Layout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Layout.swift"; path = "Source/Extensions/UIView+Layout.swift"; sourceTree = "<group>"; };
+		5ED70B1CD25BB08E24E44BA04CCF0774 /* LBTATools */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LBTATools; path = LBTATools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62A45D2D56DBF736AF41927E9F66F563 /* AspectFitImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AspectFitImageView.swift; path = Source/Extensions/AspectFitImageView.swift; sourceTree = "<group>"; };
+		6C184A6C92B5F3CB4943B6E49411EBC8 /* Pods-fbLoginPage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-fbLoginPage-umbrella.h"; sourceTree = "<group>"; };
+		6C59B339E434E5D7B7354CCF5F0CA45E /* LBTAComponents */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LBTAComponents; path = LBTAComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE1560E54132B4675C9899BD57238DB /* UIImage+Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Helper.swift"; path = "LBTAComponents/Classes/UIImage+Helper.swift"; sourceTree = "<group>"; };
+		70B8BB84BB7C3F5EC8C2E2EB5B10CDE3 /* LBTATools-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LBTATools-dummy.m"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7E575D11B4DD9490A5A841461B7983F6 /* Pods-fbLoginPage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-fbLoginPage.debug.xcconfig"; sourceTree = "<group>"; };
+		8259D3281D1FCFA6AC8EB80C55795AE2 /* UIButton+Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Helper.swift"; path = "LBTAComponents/Classes/UIButton+Helper.swift"; sourceTree = "<group>"; };
+		82DAA601815CFC1F4EF49B07D92E9064 /* Pods-fbLoginPage-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-fbLoginPage-acknowledgements.plist"; sourceTree = "<group>"; };
+		86BB0AC59D0883723BAAEAA54AD0FBEE /* LBTAComponents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LBTAComponents.release.xcconfig; sourceTree = "<group>"; };
+		89339FFCDDD83B683A2B692ABD00CD0E /* LBTATextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LBTATextView.swift; path = LBTAComponents/Classes/LBTATextView.swift; sourceTree = "<group>"; };
+		92EE6D25161AFF6F3FB5A60970728912 /* AnchoredConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnchoredConstraints.swift; path = Source/AnchoredConstraints.swift; sourceTree = "<group>"; };
+		9BFF7226CD8C66E7BCBC41CA42A0F40B /* LBTATools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LBTATools.swift; path = Source/LBTATools/LBTATools.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3504408CB07CFED2FAA7A17B684A59C /* Pods-fbLoginPage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-fbLoginPage.modulemap"; sourceTree = "<group>"; };
+		AC0919A282065343B10E0355DB6D05F9 /* LBTAComponents-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBTAComponents-prefix.pch"; sourceTree = "<group>"; };
+		ACBD60AB5E49CC99D548424E337363F5 /* LBTAComponents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBTAComponents-umbrella.h"; sourceTree = "<group>"; };
+		AD33A95E9D59C9B1E8F9CCEC295AE4F1 /* Pods-fbLoginPage-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-fbLoginPage-frameworks.sh"; sourceTree = "<group>"; };
+		B2EBB9F28D69E60669A683057F964052 /* DatasourceCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatasourceCell.swift; path = LBTAComponents/Classes/DatasourceCell.swift; sourceTree = "<group>"; };
+		BAF1260053FCDBA55E80FDD56062062C /* LBTAFormController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LBTAFormController.swift; path = Source/Form/LBTAFormController.swift; sourceTree = "<group>"; };
+		BFF79E4DB22CAFF6DEF8666FFC031907 /* LBTAComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LBTAComponents.debug.xcconfig; sourceTree = "<group>"; };
+		C11E93B37F3711570F9A86D9159B57DE /* UITextField+Tools.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Tools.swift"; path = "Source/Extensions/UITextField+Tools.swift"; sourceTree = "<group>"; };
+		C693F68272949DAEB6B696A36CFD63B4 /* IndentedTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndentedTextField.swift; path = Source/Extensions/IndentedTextField.swift; sourceTree = "<group>"; };
+		CDB2F3A006943989B2E341C61F4A5B90 /* LBTAListHeaderFooterController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LBTAListHeaderFooterController.swift; path = Source/ListController/LBTAListHeaderFooterController.swift; sourceTree = "<group>"; };
+		D5B6818BF6E380CDCBBD78682515EEF4 /* DiscardableImageCacheItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiscardableImageCacheItem.swift; path = LBTAComponents/Classes/DiscardableImageCacheItem.swift; sourceTree = "<group>"; };
+		DA0ADF10120CC730C3ECBA8C35D7FE1A /* UIView+Stacking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Stacking.swift"; path = "Source/Extensions/UIView+Stacking.swift"; sourceTree = "<group>"; };
+		DBECF5D9A56EABCC056A6B63E7DB8EE5 /* Pods-fbLoginPage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-fbLoginPage-dummy.m"; sourceTree = "<group>"; };
+		E1A7B34F49C646098EE085ABDEB5CAA2 /* UIColor+Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Helper.swift"; path = "LBTAComponents/Classes/UIColor+Helper.swift"; sourceTree = "<group>"; };
+		E90FED0EB0D8AD664F66AB142E3D090A /* UIView+Anchors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Anchors.swift"; path = "LBTAComponents/Classes/UIView+Anchors.swift"; sourceTree = "<group>"; };
+		E91A1FD3D04B86CEADAADE9FDD942E01 /* LBTATools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LBTATools.debug.xcconfig; sourceTree = "<group>"; };
+		E940988AAF6E25D18BD319E97D467EC2 /* LBTALabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LBTALabel.swift; path = LBTAComponents/Classes/LBTALabel.swift; sourceTree = "<group>"; };
+		EA03E993E5E6F4423A077350ED9A24AE /* LBTAListHeaderController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LBTAListHeaderController.swift; path = Source/ListController/LBTAListHeaderController.swift; sourceTree = "<group>"; };
+		EC4AEE933E02A75DF7EB489F90370DD2 /* LBTATools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LBTATools.release.xcconfig; sourceTree = "<group>"; };
+		ED1FE382B9F6C3F2C91470BD8F160A4D /* LBTAComponents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LBTAComponents-dummy.m"; sourceTree = "<group>"; };
+		EEFE90A336F5E16654C26BA13BCA0C41 /* LBTATools-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBTATools-prefix.pch"; sourceTree = "<group>"; };
+		F05AECF48306491507BE83BD10754EAD /* Pods-fbLoginPage */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-fbLoginPage"; path = Pods_fbLoginPage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1A2497696711C56DA308DFB3B7C8A55 /* Datasource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Datasource.swift; path = LBTAComponents/Classes/Datasource.swift; sourceTree = "<group>"; };
+		F20E1524B077ADD86B1453589E3D7B6E /* UITextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITextView.swift; path = Source/Extensions/UITextView.swift; sourceTree = "<group>"; };
+		F36123FDED0DE4A89CD5A8A4A466F780 /* LBTATools-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBTATools-umbrella.h"; sourceTree = "<group>"; };
+		F40F82A2E354E9969BB6E2C8BF51578C /* CircularImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularImageView.swift; path = Source/UIKitSubclasses/CircularImageView.swift; sourceTree = "<group>"; };
+		FDB5F0719F8DBC03620F3FF712D1A203 /* Pods-fbLoginPage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-fbLoginPage-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C2F60B9413C69837CB086439A78A889 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E0227B52F8717D69235169993070489 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A4790A1F315F7AC1986D90F18024717 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE362744205CBFCE1CB431F2F004D586 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C11D04C14E82AA618F2CBAFD5DC58706 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E05BDE3643F8277502980E104CC9B923 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22855F11DB83A5795BDECE473967539A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2A58445EA9A70F33B0BAB22AE3A6706B /* LBTAComponents.modulemap */,
+				ED1FE382B9F6C3F2C91470BD8F160A4D /* LBTAComponents-dummy.m */,
+				152C45454E65A60DE7F1809AB75E8C2E /* LBTAComponents-Info.plist */,
+				AC0919A282065343B10E0355DB6D05F9 /* LBTAComponents-prefix.pch */,
+				ACBD60AB5E49CC99D548424E337363F5 /* LBTAComponents-umbrella.h */,
+				BFF79E4DB22CAFF6DEF8666FFC031907 /* LBTAComponents.debug.xcconfig */,
+				86BB0AC59D0883723BAAEAA54AD0FBEE /* LBTAComponents.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LBTAComponents";
+			sourceTree = "<group>";
+		};
+		49627F62BBAE7809EF4913CCA93EA636 /* Pods-fbLoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				A3504408CB07CFED2FAA7A17B684A59C /* Pods-fbLoginPage.modulemap */,
+				012145B2D2C5B8CC15968F762AFC576D /* Pods-fbLoginPage-acknowledgements.markdown */,
+				82DAA601815CFC1F4EF49B07D92E9064 /* Pods-fbLoginPage-acknowledgements.plist */,
+				DBECF5D9A56EABCC056A6B63E7DB8EE5 /* Pods-fbLoginPage-dummy.m */,
+				AD33A95E9D59C9B1E8F9CCEC295AE4F1 /* Pods-fbLoginPage-frameworks.sh */,
+				FDB5F0719F8DBC03620F3FF712D1A203 /* Pods-fbLoginPage-Info.plist */,
+				6C184A6C92B5F3CB4943B6E49411EBC8 /* Pods-fbLoginPage-umbrella.h */,
+				7E575D11B4DD9490A5A841461B7983F6 /* Pods-fbLoginPage.debug.xcconfig */,
+				033E34FBE4025A8E1780BE827672D6F2 /* Pods-fbLoginPage.release.xcconfig */,
+			);
+			name = "Pods-fbLoginPage";
+			path = "Target Support Files/Pods-fbLoginPage";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		70F99AAA892BC276AD0B2CE7EDF4708A /* LBTATools */ = {
+			isa = PBXGroup;
+			children = (
+				92EE6D25161AFF6F3FB5A60970728912 /* AnchoredConstraints.swift */,
+				62A45D2D56DBF736AF41927E9F66F563 /* AspectFitImageView.swift */,
+				F40F82A2E354E9969BB6E2C8BF51578C /* CircularImageView.swift */,
+				C693F68272949DAEB6B696A36CFD63B4 /* IndentedTextField.swift */,
+				BAF1260053FCDBA55E80FDD56062062C /* LBTAFormController.swift */,
+				1A3077624D7E966683C33DCF4CCA1883 /* LBTAListCell.swift */,
+				4A9EFC1EED1D8E18EBEC1555535F1A68 /* LBTAListController.swift */,
+				EA03E993E5E6F4423A077350ED9A24AE /* LBTAListHeaderController.swift */,
+				CDB2F3A006943989B2E341C61F4A5B90 /* LBTAListHeaderFooterController.swift */,
+				9BFF7226CD8C66E7BCBC41CA42A0F40B /* LBTATools.swift */,
+				55E9F3341FF3A143C9276ADC63BB1736 /* UIButton.swift */,
+				1B19D80093148BF73172E5CC01192BF1 /* UIColor+Helpers.swift */,
+				093B8F2A3F8AF8D147C1B3F4C88A215F /* UILabel.swift */,
+				05FAACAB8D34FCC831A867C56FD488D5 /* UIStackView.swift */,
+				C11E93B37F3711570F9A86D9159B57DE /* UITextField+Tools.swift */,
+				F20E1524B077ADD86B1453589E3D7B6E /* UITextView.swift */,
+				58B22F157C6D3133E6D0D64D868B457D /* UIView+Layout.swift */,
+				DA0ADF10120CC730C3ECBA8C35D7FE1A /* UIView+Stacking.swift */,
+				870D2201951411FE758FBCD069723CAC /* Support Files */,
+			);
+			name = LBTATools;
+			path = LBTATools;
+			sourceTree = "<group>";
+		};
+		870D2201951411FE758FBCD069723CAC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				465962FFE6715577F9B5EE435CC0B91C /* LBTATools.modulemap */,
+				70B8BB84BB7C3F5EC8C2E2EB5B10CDE3 /* LBTATools-dummy.m */,
+				2AE5BAA9BA6882B686D77F60E157F23E /* LBTATools-Info.plist */,
+				EEFE90A336F5E16654C26BA13BCA0C41 /* LBTATools-prefix.pch */,
+				F36123FDED0DE4A89CD5A8A4A466F780 /* LBTATools-umbrella.h */,
+				E91A1FD3D04B86CEADAADE9FDD942E01 /* LBTATools.debug.xcconfig */,
+				EC4AEE933E02A75DF7EB489F90370DD2 /* LBTATools.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LBTATools";
+			sourceTree = "<group>";
+		};
+		B86D9A9C9380475E42A66C3B2AB19DFC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				49627F62BBAE7809EF4913CCA93EA636 /* Pods-fbLoginPage */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF0B3133C86584AC224BA96EC7C998A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE22EE85DFFB8EFA8762857D9BE4C666 /* LBTAComponents */,
+				70F99AAA892BC276AD0B2CE7EDF4708A /* LBTATools */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				CF0B3133C86584AC224BA96EC7C998A6 /* Pods */,
+				D8B524FBF306E042C09D07AA90905C4D /* Products */,
+				B86D9A9C9380475E42A66C3B2AB19DFC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8B524FBF306E042C09D07AA90905C4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C59B339E434E5D7B7354CCF5F0CA45E /* LBTAComponents */,
+				5ED70B1CD25BB08E24E44BA04CCF0774 /* LBTATools */,
+				F05AECF48306491507BE83BD10754EAD /* Pods-fbLoginPage */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE22EE85DFFB8EFA8762857D9BE4C666 /* LBTAComponents */ = {
+			isa = PBXGroup;
+			children = (
+				070578B74F05FB17D181C626932AFB09 /* CachedImageView.swift */,
+				F1A2497696711C56DA308DFB3B7C8A55 /* Datasource.swift */,
+				B2EBB9F28D69E60669A683057F964052 /* DatasourceCell.swift */,
+				5109FD3AA0E38747E87894976408AE30 /* DatasourceController.swift */,
+				550E381DF5A92F9E1EABD0E4A57FAAC4 /* DefaultCells.swift */,
+				D5B6818BF6E380CDCBBD78682515EEF4 /* DiscardableImageCacheItem.swift */,
+				E940988AAF6E25D18BD319E97D467EC2 /* LBTALabel.swift */,
+				89339FFCDDD83B683A2B692ABD00CD0E /* LBTATextView.swift */,
+				1B277EF13A82F09BA347D00171E32083 /* NSMutableAttributedString+Helper.swift */,
+				8259D3281D1FCFA6AC8EB80C55795AE2 /* UIButton+Helper.swift */,
+				E1A7B34F49C646098EE085ABDEB5CAA2 /* UIColor+Helper.swift */,
+				6EE1560E54132B4675C9899BD57238DB /* UIImage+Helper.swift */,
+				E90FED0EB0D8AD664F66AB142E3D090A /* UIView+Anchors.swift */,
+				22855F11DB83A5795BDECE473967539A /* Support Files */,
+			);
+			name = LBTAComponents;
+			path = LBTAComponents;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		175CBB712E9D165B05014FB7A17458EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28A8B75D29E13DAAD3F2B6FF7E4C04AB /* LBTAComponents-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D16E187C55D72C6A6999B00B9A863C4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81C0C282EEA7314F8AF4326B49CF2E9E /* LBTATools-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE372121FFF87120B75216EB364E4087 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66E85A9FFF4F0F524E059B221E17EFC2 /* Pods-fbLoginPage-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0CFE686F9AF2468EF76C4F4177CC03FB /* Pods-fbLoginPage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 875867911E54DB1E23E1FA37EFA0CD2A /* Build configuration list for PBXNativeTarget "Pods-fbLoginPage" */;
+			buildPhases = (
+				FE372121FFF87120B75216EB364E4087 /* Headers */,
+				39B3809C858278EFD1486807A6B2A02F /* Sources */,
+				9A4790A1F315F7AC1986D90F18024717 /* Frameworks */,
+				334FAE471D3FB17EB104174713D08298 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				782C5A226AE801CF5213938322E625C0 /* PBXTargetDependency */,
+				EBE4DCBF524A3B6012BD5794B49D6B11 /* PBXTargetDependency */,
+			);
+			name = "Pods-fbLoginPage";
+			productName = Pods_fbLoginPage;
+			productReference = F05AECF48306491507BE83BD10754EAD /* Pods-fbLoginPage */;
+			productType = "com.apple.product-type.framework";
+		};
+		507F07FC62AFC9C6A73513E671361060 /* LBTAComponents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D56C0790329DF54372512482C118EB8D /* Build configuration list for PBXNativeTarget "LBTAComponents" */;
+			buildPhases = (
+				175CBB712E9D165B05014FB7A17458EC /* Headers */,
+				3DD04056D3C4D5D0C97813C7DA93C884 /* Sources */,
+				C11D04C14E82AA618F2CBAFD5DC58706 /* Frameworks */,
+				12BC7181C24AE8F2CAF20F00475A8DAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LBTAComponents;
+			productName = LBTAComponents;
+			productReference = 6C59B339E434E5D7B7354CCF5F0CA45E /* LBTAComponents */;
+			productType = "com.apple.product-type.framework";
+		};
+		99EAE32514CAA452AFA381A6172A1587 /* LBTATools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DD3DA7EC675A40D6E04BD926982E925 /* Build configuration list for PBXNativeTarget "LBTATools" */;
+			buildPhases = (
+				8D16E187C55D72C6A6999B00B9A863C4 /* Headers */,
+				E5C70AFC8D449295394341E07E59956D /* Sources */,
+				8C2F60B9413C69837CB086439A78A889 /* Frameworks */,
+				5F7008E70DF7CA2B878C9536600FA587 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LBTATools;
+			productName = LBTATools;
+			productReference = 5ED70B1CD25BB08E24E44BA04CCF0774 /* LBTATools */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = D8B524FBF306E042C09D07AA90905C4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				507F07FC62AFC9C6A73513E671361060 /* LBTAComponents */,
+				99EAE32514CAA452AFA381A6172A1587 /* LBTATools */,
+				0CFE686F9AF2468EF76C4F4177CC03FB /* Pods-fbLoginPage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		12BC7181C24AE8F2CAF20F00475A8DAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		334FAE471D3FB17EB104174713D08298 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F7008E70DF7CA2B878C9536600FA587 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39B3809C858278EFD1486807A6B2A02F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493F81953741ABEA9B85A8A90D690332 /* Pods-fbLoginPage-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DD04056D3C4D5D0C97813C7DA93C884 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EB5C2FB858BA7797C59CCBDEDD851C2 /* CachedImageView.swift in Sources */,
+				ED6CBBA3AF59B4C0E593001A29BA60FB /* Datasource.swift in Sources */,
+				5B70E889E63961619BCDD935A148C927 /* DatasourceCell.swift in Sources */,
+				E844254D210B3B593083ED90A285772C /* DatasourceController.swift in Sources */,
+				B6F60B3DFC27BFB1B20CDE3715DFDBC9 /* DefaultCells.swift in Sources */,
+				8204D8D1825937A253CB03EE28C4FEDE /* DiscardableImageCacheItem.swift in Sources */,
+				B361B0C46AC67AE4BDD3D70A2E5112C0 /* LBTAComponents-dummy.m in Sources */,
+				954FEB241042B00CD661EB5CFA0A0ED6 /* LBTALabel.swift in Sources */,
+				C5C168C4C6796E08DC70480532A80C72 /* LBTATextView.swift in Sources */,
+				0E7E58141CE3791650728E18DE4C697C /* NSMutableAttributedString+Helper.swift in Sources */,
+				530B4C93784AD06D2ACC257BFA5AC2CE /* UIButton+Helper.swift in Sources */,
+				F356EB4F1F059BF8D28EF4E974AB08FC /* UIColor+Helper.swift in Sources */,
+				9D2EEDDA9888A296BC1399F3FFC9ADEC /* UIImage+Helper.swift in Sources */,
+				5707556E127544250704441741A4CF1D /* UIView+Anchors.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5C70AFC8D449295394341E07E59956D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B77B10F499EC660BDCBF15EC3EFB7B34 /* AnchoredConstraints.swift in Sources */,
+				19EAA425F57998A767938E00930FB6BC /* AspectFitImageView.swift in Sources */,
+				E52EDF3D4AFB6A4A730CBEAC49FAE7F5 /* CircularImageView.swift in Sources */,
+				E2A1B9577FFA2F1DE11EF7F1B5FEF766 /* IndentedTextField.swift in Sources */,
+				98F05FD76FCF63C533B0F344CAC87A7E /* LBTAFormController.swift in Sources */,
+				4D853D14783D2E0F54C2C9BF015192B4 /* LBTAListCell.swift in Sources */,
+				789A2AF3A7A0144E98233EE5FC5DDE5C /* LBTAListController.swift in Sources */,
+				4F6C78A9A018098D6359352C0ABE1474 /* LBTAListHeaderController.swift in Sources */,
+				118F739EE87877166CB87621F9EA3A99 /* LBTAListHeaderFooterController.swift in Sources */,
+				46E6EA7AE55CB2353C5A443E44BDF5D6 /* LBTATools.swift in Sources */,
+				0CA63E855542AB1B4A2AE56FB3DBE28D /* LBTATools-dummy.m in Sources */,
+				0B62441058D5662141C3729FA1B0AB02 /* UIButton.swift in Sources */,
+				40A55DDA49C455E58209A1B7DE087083 /* UIColor+Helpers.swift in Sources */,
+				3CAFA50BCA8A1A9CDE463093857BFDDF /* UILabel.swift in Sources */,
+				386BAF213EACE08324CDC982CBF13473 /* UIStackView.swift in Sources */,
+				5A36F1C582D8D2F781B96B14A26BA66E /* UITextField+Tools.swift in Sources */,
+				2AFCEF5715367C95BD5471ACBAEC7DAB /* UITextView.swift in Sources */,
+				E05E6E62C7A07DD9E87A07ED9C9F0172 /* UIView+Layout.swift in Sources */,
+				EE10A4D1207FA2DB3F739DCDF21DCCF3 /* UIView+Stacking.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		782C5A226AE801CF5213938322E625C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LBTAComponents;
+			target = 507F07FC62AFC9C6A73513E671361060 /* LBTAComponents */;
+			targetProxy = AE9A1756998DB1658118C97AFAA0229F /* PBXContainerItemProxy */;
+		};
+		EBE4DCBF524A3B6012BD5794B49D6B11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LBTATools;
+			target = 99EAE32514CAA452AFA381A6172A1587 /* LBTATools */;
+			targetProxy = 835EEFCF317FC9BDD27D118ECFCF998A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2DFA2266EAB8DE088088F4CBF98A9B31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E91A1FD3D04B86CEADAADE9FDD942E01 /* LBTATools.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LBTATools/LBTATools-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LBTATools/LBTATools-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LBTATools/LBTATools.modulemap";
+				PRODUCT_MODULE_NAME = LBTATools;
+				PRODUCT_NAME = LBTATools;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4D4A1FE060CED4738781AA1415960190 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC4AEE933E02A75DF7EB489F90370DD2 /* LBTATools.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LBTATools/LBTATools-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LBTATools/LBTATools-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LBTATools/LBTATools.modulemap";
+				PRODUCT_MODULE_NAME = LBTATools;
+				PRODUCT_NAME = LBTATools;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5964806DD215AB139488415776777C76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E575D11B4DD9490A5A841461B7983F6 /* Pods-fbLoginPage.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-fbLoginPage/Pods-fbLoginPage-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-fbLoginPage/Pods-fbLoginPage.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5D54BD3737FB67FCCA244BEDB590D1B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86BB0AC59D0883723BAAEAA54AD0FBEE /* LBTAComponents.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LBTAComponents/LBTAComponents-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LBTAComponents/LBTAComponents-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LBTAComponents/LBTAComponents.modulemap";
+				PRODUCT_MODULE_NAME = LBTAComponents;
+				PRODUCT_NAME = LBTAComponents;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6A5C026ED62BBFE3380CD257EEFAEB20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6FF674945CF3D997985FEFA7451ADCEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 033E34FBE4025A8E1780BE827672D6F2 /* Pods-fbLoginPage.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-fbLoginPage/Pods-fbLoginPage-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-fbLoginPage/Pods-fbLoginPage.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DD4054D9E0BF603966C21F4AFF8BB4BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFF79E4DB22CAFF6DEF8666FFC031907 /* LBTAComponents.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LBTAComponents/LBTAComponents-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LBTAComponents/LBTAComponents-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LBTAComponents/LBTAComponents.modulemap";
+				PRODUCT_MODULE_NAME = LBTAComponents;
+				PRODUCT_NAME = LBTAComponents;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E873CA97BD124B21839AF13C9BE1CD18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A5C026ED62BBFE3380CD257EEFAEB20 /* Debug */,
+				E873CA97BD124B21839AF13C9BE1CD18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		875867911E54DB1E23E1FA37EFA0CD2A /* Build configuration list for PBXNativeTarget "Pods-fbLoginPage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5964806DD215AB139488415776777C76 /* Debug */,
+				6FF674945CF3D997985FEFA7451ADCEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DD3DA7EC675A40D6E04BD926982E925 /* Build configuration list for PBXNativeTarget "LBTATools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DFA2266EAB8DE088088F4CBF98A9B31 /* Debug */,
+				4D4A1FE060CED4738781AA1415960190 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D56C0790329DF54372512482C118EB8D /* Build configuration list for PBXNativeTarget "LBTAComponents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4054D9E0BF603966C21F4AFF8BB4BD /* Debug */,
+				5D54BD3737FB67FCCA244BEDB590D1B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
