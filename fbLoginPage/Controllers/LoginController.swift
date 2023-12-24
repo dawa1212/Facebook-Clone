@@ -1,12 +1,10 @@
 import UIKit
 
-class LoginController: UIViewController, LoginViewDelegate {
+class LoginController: UIViewController{
     
     private let viewModel = LoginViewModel()
     
-    lazy var screen: LoginView = {
-        LoginView(delegate: self)
-    }()
+    lazy var screen = LoginView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,15 +21,16 @@ class LoginController: UIViewController, LoginViewDelegate {
             screen.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
-        screen.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        screen.loginButton.addTarget(self, action: #selector(loginButtonTapped(_:)), for: .touchUpInside)
+        screen.forgetPassword.addTarget(self, action: #selector(forgetButtonTapped), for: .touchUpInside)
+        screen.createButton.addTarget(self, action: #selector(createButtonTapped), for: .touchUpInside)
     }
     
     // MARK: - LoginViewDelegate
     
-    @objc func loginButtonTapped(email: String, password: String) {
-        //        viewModel.email = email
-        //        viewModel.password = password
-        
+    @objc func loginButtonTapped(_ sender: UIButton) {
+        let email = screen.emailTextField.text ?? ""
+        let password = screen.passwordTextField.text ?? ""
         if viewModel.validateCredentials() {
             if email == viewModel.email && password == viewModel.password {
                 
@@ -47,12 +46,12 @@ class LoginController: UIViewController, LoginViewDelegate {
         
     }
     
-    func forgetButtonTapped() {
+    @objc func forgetButtonTapped() {
         let forgetPasswordVC = ForgetPasswordController()
         navigationController?.pushViewController(forgetPasswordVC, animated: true)
     }
     
-    func createButtonTapped() {
+    @objc func createButtonTapped() {
         let signUpVC = SignUpController()
         navigationController?.pushViewController(signUpVC, animated: true)
     }

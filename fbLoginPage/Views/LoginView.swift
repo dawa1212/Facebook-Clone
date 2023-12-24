@@ -1,15 +1,15 @@
 import UIKit
 
-protocol LoginViewDelegate: AnyObject {
-    func loginButtonTapped(email: String, password: String)
-    func forgetButtonTapped()
-    func createButtonTapped()
-}
+//protocol LoginViewDelegate: AnyObject {
+//    func loginButtonTapped(email: String, password: String)
+//    func forgetButtonTapped()
+//    func createButtonTapped()
+//}
 
 class LoginView: UIView {
     
-    weak var delegate: LoginViewDelegate?
-
+    //weak var delegate: LoginViewDelegate?
+    
     let containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -28,7 +28,7 @@ class LoginView: UIView {
         view.alignment = .fill
         return view
     }()
-
+    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "facebook"
@@ -38,14 +38,14 @@ class LoginView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
+    
     let emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Email or phone number"
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
-
+    
     let passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Password"
@@ -53,7 +53,7 @@ class LoginView: UIView {
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
-
+    
     let loginButton: UIButton = {
         let button = UIButton()
         button.setTitle("Log In", for: .normal)
@@ -61,7 +61,7 @@ class LoginView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
+    
     let forgetPassword: UIButton = {
         let button = UIButton()
         button.setTitle("Forget password?", for: .normal)
@@ -93,23 +93,22 @@ class LoginView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
-    init(delegate: LoginViewDelegate) {
-        self.delegate = delegate
+    
+    init() {
         super.init(frame: .zero)
         setupUI()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     private func setupUI() {
         addSubview(containerView)
         containerView.addSubview(stackView)
         [titleLabel, emailTextField, passwordTextField, loginButton, forgetPassword, separatorLine, createButton].forEach(stackView.addArrangedSubview(_:))
         addSubview(infoLabel)
-
+        
         NSLayoutConstraint.activate([
             containerView.centerXAnchor.constraint(equalTo: centerXAnchor),
             containerView.centerYAnchor.constraint(equalTo: centerYAnchor),
@@ -120,37 +119,11 @@ class LoginView: UIView {
             stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16),
             stackView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
             stackView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-
+            
             infoLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             infoLabel.topAnchor.constraint(equalTo: containerView.bottomAnchor, constant: 20),
-
+            
             separatorLine.heightAnchor.constraint(equalToConstant: 1)
         ])
-
-//        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
-//        forgetPassword.addTarget(self, action: #selector(forgetButtonTapped), for: .touchUpInside)
-//        createButton.addTarget(self, action: #selector(createButtonTapped), for: .touchUpInside)
     }
-
-//    @objc private func loginButtonTapped() {
-//        guard let email = emailTextField.text, !email.isEmpty else {
-//            // Show error message
-//            return
-//        }
-//
-//        guard let password = passwordTextField.text, !password.isEmpty else {
-//            // Show error message
-//            return
-//        }
-//
-//        delegate?.loginButtonTapped(email: email, password: password)
-//    }
-//
-//    @objc private func forgetButtonTapped() {
-//        delegate?.forgetButtonTapped()
-//    }
-//
-//    @objc private func createButtonTapped() {
-//        delegate?.createButtonTapped()
-//    }
 }
