@@ -9,30 +9,30 @@ class LoginController: UIViewController{
     
     override func loadView() {
         super.loadView()
-         view =  screen
+        view =  screen
     }
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGray6
-                
+        
         screen.loginButton.addTarget(self, action: #selector(loginButtonTapped(_:)), for: .touchUpInside)
         screen.forgetPassword.addTarget(self, action: #selector(forgetButtonTapped), for: .touchUpInside)
         screen.createButton.addTarget(self, action: #selector(createButtonTapped), for: .touchUpInside)
     }
     
     @objc func loginButtonTapped(_ sender: UIButton) {
-        let email = screen.emailTextField.text ?? ""
-        let password = screen.passwordTextField.text ?? ""
-        if viewModel.validateCredentials() {
-            if email == viewModel.email && password == viewModel.password {
-                
-                let homeVC = HomeController()
-                navigationController?.pushViewController(homeVC, animated: true)
-            } else {
-                showAlert(message: "Incorrect email or password.")
-            }
-            
+        viewModel.email = screen.emailTextField.text ?? ""
+        viewModel.password = screen.passwordTextField.text ?? ""
+
+        let error = viewModel.validateCredentials()
+        if !error.isEmpty {
+            showAlert(message: error)
+            return
+        }
+        if viewModel.checkLogin() {
+            let homeVC = HomeController()
+            navigationController?.pushViewController(homeVC, animated: true)
         } else {
             showAlert(message: "Incorrect email or password.")
         }
@@ -49,10 +49,6 @@ class LoginController: UIViewController{
         navigationController?.pushViewController(signUpVC, animated: true)
     }
     
-    private func showAlert(message: String) {
-        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
+   
     
 }

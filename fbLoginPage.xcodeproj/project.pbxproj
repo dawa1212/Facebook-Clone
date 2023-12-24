@@ -19,6 +19,7 @@
 		358C46732B0F7B6C009966B8 /* AccountCheckingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358C46722B0F7B6C009966B8 /* AccountCheckingController.swift */; };
 		35E73E1C2B380E350085E481 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E73E1B2B380E350085E481 /* LoginView.swift */; };
 		35E73E1E2B3810200085E481 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E73E1D2B3810200085E481 /* HomeController.swift */; };
+		35EC63F42B382A7100405D00 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC63F32B382A7100405D00 /* UIViewController+Extension.swift */; };
 		8CFB69F73FACE5FD2907072C /* Pods_fbLoginPage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EAB9AA7245CD433D9AF756 /* Pods_fbLoginPage.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		358C46722B0F7B6C009966B8 /* AccountCheckingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCheckingController.swift; sourceTree = "<group>"; };
 		35E73E1B2B380E350085E481 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		35E73E1D2B3810200085E481 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		35EC63F32B382A7100405D00 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		C0EAB9AA7245CD433D9AF756 /* Pods_fbLoginPage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fbLoginPage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3CE6E0413A109F629B5A43 /* Pods-fbLoginPage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbLoginPage.release.xcconfig"; path = "Target Support Files/Pods-fbLoginPage/Pods-fbLoginPage.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 		358C46482B0E0794009966B8 /* fbLoginPage */ = {
 			isa = PBXGroup;
 			children = (
+				35EC63F22B382A4E00405D00 /* Extension */,
 				35EC63F02B38288A00405D00 /* Module */,
 				3542D1882B37F4E6008F6E3D /* Resources */,
 				3542D18B2B37F5BC008F6E3D /* ViewModels */,
@@ -138,6 +141,14 @@
 				358C464D2B0E0794009966B8 /* LoginController.swift */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		35EC63F22B382A4E00405D00 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				35EC63F32B382A7100405D00 /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		A9B5D33812DB190EC9817DC5 /* Pods */ = {
@@ -272,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				358C464E2B0E0794009966B8 /* LoginController.swift in Sources */,
+				35EC63F42B382A7100405D00 /* UIViewController+Extension.swift in Sources */,
 				358C466E2B0F3926009966B8 /* SignUpController.swift in Sources */,
 				358C466C2B0F132A009966B8 /* AnimalDetailViewController.swift in Sources */,
 				358C464A2B0E0794009966B8 /* AppDelegate.swift in Sources */,
