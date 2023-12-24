@@ -6,20 +6,16 @@ class LoginController: UIViewController{
     
     lazy var screen = LoginView()
     
+    
+    override func loadView() {
+        super.loadView()
+         view =  screen
+    }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGray6
-        
-        view.addSubview(screen)
-        screen.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            screen.topAnchor.constraint(equalTo: view.topAnchor),
-            screen.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            screen.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            screen.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
-        
+                
         screen.loginButton.addTarget(self, action: #selector(loginButtonTapped(_:)), for: .touchUpInside)
         screen.forgetPassword.addTarget(self, action: #selector(forgetButtonTapped), for: .touchUpInside)
         screen.createButton.addTarget(self, action: #selector(createButtonTapped), for: .touchUpInside)
