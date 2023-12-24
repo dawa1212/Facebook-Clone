@@ -1,14 +1,6 @@
 import UIKit
 
-//protocol LoginViewDelegate: AnyObject {
-//    func loginButtonTapped(email: String, password: String)
-//    func forgetButtonTapped()
-//    func createButtonTapped()
-//}
-
 class LoginView: UIView {
-    
-    //weak var delegate: LoginViewDelegate?
     
     let containerView: UIView = {
         let view = UIView()

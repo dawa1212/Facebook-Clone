@@ -10,7 +10,6 @@ class LoginController: UIViewController{
         super.viewDidLoad()
         view.backgroundColor = .systemGray6
         
-        
         view.addSubview(screen)
         screen.translatesAutoresizingMaskIntoConstraints = false
         
@@ -25,8 +24,6 @@ class LoginController: UIViewController{
         screen.forgetPassword.addTarget(self, action: #selector(forgetButtonTapped), for: .touchUpInside)
         screen.createButton.addTarget(self, action: #selector(createButtonTapped), for: .touchUpInside)
     }
-    
-    // MARK: - LoginViewDelegate
     
     @objc func loginButtonTapped(_ sender: UIButton) {
         let email = screen.emailTextField.text ?? ""
