@@ -57,7 +57,6 @@
 		3542D1862B37E318008F6E3D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				35E73E1B2B380E350085E481 /* LoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -76,7 +75,6 @@
 		3542D18B2B37F5BC008F6E3D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				3542D18C2B37F5D5008F6E3D /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -102,6 +100,7 @@
 		358C46482B0E0794009966B8 /* fbLoginPage */ = {
 			isa = PBXGroup;
 			children = (
+				35EC63F02B38288A00405D00 /* Module */,
 				3542D1882B37F4E6008F6E3D /* Resources */,
 				3542D18B2B37F5BC008F6E3D /* ViewModels */,
 				3542D1862B37E318008F6E3D /* Views */,
@@ -114,7 +113,6 @@
 		358C46712B0F5A6D009966B8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				358C464D2B0E0794009966B8 /* LoginController.swift */,
 				358C466D2B0F3926009966B8 /* SignUpController.swift */,
 				358C466B2B0F132A009966B8 /* AnimalDetailViewController.swift */,
 				358C466F2B0F4E59009966B8 /* ForgetPasswordController.swift */,
@@ -122,6 +120,24 @@
 				35E73E1D2B3810200085E481 /* HomeController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		35EC63F02B38288A00405D00 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				35EC63F12B38289900405D00 /* login */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		35EC63F12B38289900405D00 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				35E73E1B2B380E350085E481 /* LoginView.swift */,
+				3542D18C2B37F5D5008F6E3D /* LoginViewModel.swift */,
+				358C464D2B0E0794009966B8 /* LoginController.swift */,
+			);
+			path = login;
 			sourceTree = "<group>";
 		};
 		A9B5D33812DB190EC9817DC5 /* Pods */ = {
