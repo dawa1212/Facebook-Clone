@@ -14,11 +14,12 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         
         setUpControllers()
+        
+        navigationItem.hidesBackButton = true
     }
     
     private func setUpControllers() {
         let home = HomeController()
-        
         
         let video = VideoController()
             

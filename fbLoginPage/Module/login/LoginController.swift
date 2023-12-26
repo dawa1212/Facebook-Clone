@@ -7,6 +7,8 @@ class LoginController: UIViewController{
     
     lazy var screen = LoginScreen()
     
+    private var isLoggingIn = false
+    
     
     override func loadView() {
         super.loadView()
@@ -34,26 +36,38 @@ class LoginController: UIViewController{
     }
     
     @objc func loginButtonTapped(_ sender: UIButton) {
-        viewModel.email = screen.emailTextField.text ?? ""
-        viewModel.password = screen.passwordTextField.text ?? ""
-
-        let error = viewModel.validateCredentials()
-        if !error.isEmpty {
-            showAlert(message: error)
+        
+        guard !isLoggingIn else {
             return
         }
+        
+//        viewModel.email = screen.emailTextField.text ?? ""
+//        viewModel.password = screen.passwordTextField.text ?? ""
+//
+//        let error = viewModel.validateCredentials()
+//        if !error.isEmpty {
+//            showAlert(message: error)
+//            return
+//        }
+        
+        isLoggingIn = true
 
-        viewModel.authenticate { [weak self] result in
-            guard let strongSelf = self else { return }
-            
-            switch result {
-            case .success:
+//        viewModel.authenticate { [weak self] result in
+//            guard let strongSelf = self else { return }
+//            
+//            switch result {
+//            case .success:
+        navigationController?.setNavigationBarHidden(true, animated: false)
                 let tabBarController = TabBarController()
-                strongSelf.navigationController?.pushViewController(tabBarController, animated: true)
-            case .failure(let error):
-                strongSelf.showAlert(message: "Login failed. \(error.localizedDescription)")
-            }
-        }
+        navigationController?.pushViewController(tabBarController, animated: true)
+//                strongSelf.navigationController?.pushViewController(tabBarController, animated: true)
+//            case .failure(let error):
+//                strongSelf.showAlert(message: "Login failed. \(error.localizedDescription)")
+//            }
+            
+//            strongSelf.isLoggingIn = false
+        isLoggingIn = false
+//        }
     }
     
     @objc func forgetButtonTapped() {

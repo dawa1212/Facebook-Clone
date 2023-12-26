@@ -34,6 +34,8 @@ class HomeController: UIViewController {
                                                UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"),
                                                                style: .plain,
                                                                target: self, action: #selector(didTapMagnifyButton))]
+//        navigationItem.hidesBackButton = true
+//        navigationController?.setNavigationBarHidden(true, animated: false)
         prepareLayout()
         
         
