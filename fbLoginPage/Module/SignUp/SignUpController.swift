@@ -2,6 +2,7 @@ import UIKit
 
 class SignUpController: UIViewController {
     
+    private let viewModel = SignUpViewModel()
     lazy var screen = SignUpScreen()
     
     
@@ -20,43 +21,31 @@ class SignUpController: UIViewController {
     
     private func setupUI() {
         
-      
         screen.createButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
     @objc func loginButtonTapped() {
         
-        guard let firstName = screen.firstName.text, !firstName.isEmpty else {
-            showAlert(message: "Please enter your first name.")
+        viewModel.firstName = screen.firstName.text ?? ""
+        viewModel.lastName = screen.lastName.text ?? ""
+        viewModel.contact = screen.contact.text ?? ""
+        viewModel.password = screen.password.text ?? ""
+        viewModel.confirmPassword = screen.confirmPassword.text ?? ""
+        
+        let error = viewModel.validateSignUpdata()
+        if !error.isEmpty {
+            showAlert(message: error)
             return
         }
         
-        guard let lastName = screen.lastName.text, !lastName.isEmpty else {
-            showAlert(message: "Please enter your last name.")
-            return
+        viewModel.signUp {[weak self] result in
+            guard let strongself = self else { return }
+            switch result {
+            case .success:
+                strongself.navigationController?.popViewController(animated: true)
+            case .failure(let error):
+                strongself.showAlert(message: "SignUp failed. \(error.localizedDescription)")
+            }
         }
-        
-        guard let contact = screen.contact.text, !contact.isEmpty else {
-            showAlert(message: "Please enter your email or mobile number.")
-            return
-        }
-        
-        guard let password = screen.password.text, !password.isEmpty else {
-            showAlert(message: "Please enter password.")
-            return
-        }
-        
-        guard let confirmPassword = screen.confirmPassword.text, !confirmPassword.isEmpty else {
-            showAlert(message: "Please enter your password.")
-            return
-        }
-        
-        guard password == confirmPassword else {
-            showAlert(message: "Password do not match. Please enter the matching password")
-            return
-        }
-        
-        let loginController = LoginController()
-        navigationController?.setViewControllers([loginController], animated: true)
     }
 }

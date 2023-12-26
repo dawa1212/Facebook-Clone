@@ -148,6 +148,6 @@ class SignUpScreen: UIView {
 }
 
 
-#Preview {
-    SignUpScreen()
-}
+//#Preview {
+//    SignUpScreen()
+//}

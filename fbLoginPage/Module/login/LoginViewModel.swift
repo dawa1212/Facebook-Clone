@@ -10,10 +10,25 @@ class LoginViewModel {
         } else if password.isEmpty {
             return "Please enter a  password"
         }
-       return ""
+        return ""
     }
     
-    func checkLogin() -> Bool {
-         email == "Dawa" && password == "dawa"
+    //    func checkLogin() -> Bool {
+    //         email == "Dawa" && password == "dawa"
+    //    }
+    //
+    
+    func authenticate(completion: @escaping (Result<Void, Error>) -> Void) {
+        AuthenticationService.shared.signIn(email: email, password: password) { result in
+            switch result {
+            case .success:
+                completion(.success(()))
+                
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+        
     }
+    
 }
