@@ -217,10 +217,4 @@ class SignUpController: UIViewController {
             let mainPage = LoginController()
             navigationController?.pushViewController(mainPage, animated: true)
     }
-    
-    private func showAlert(message: String) {
-        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
 }

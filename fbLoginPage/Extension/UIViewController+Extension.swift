@@ -1,0 +1,18 @@
+//
+//  UIViewController+Extension.swift
+//  fbLoginPage
+//
+//  Created by Dawa Pakhrin on 24/12/2023.
+//
+
+import UIKit.UIViewController
+
+extension UIViewController {
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+}
+
+
