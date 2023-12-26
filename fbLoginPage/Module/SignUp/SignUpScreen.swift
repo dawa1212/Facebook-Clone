@@ -105,7 +105,7 @@ class SignUpScreen: UIView {
             containerView.centerXAnchor.constraint(equalTo: centerXAnchor),
             containerView.centerYAnchor.constraint(equalTo: centerYAnchor),
             containerView.widthAnchor.constraint(equalToConstant: 300),
-            containerView.heightAnchor.constraint(equalToConstant: 430),
+            containerView.heightAnchor.constraint(equalToConstant: 400),
         ])
         
         containerView.addSubview(titleLabel)

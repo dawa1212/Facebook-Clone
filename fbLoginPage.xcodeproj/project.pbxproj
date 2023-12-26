@@ -13,9 +13,7 @@
 		358C464E2B0E0794009966B8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358C464D2B0E0794009966B8 /* LoginController.swift */; };
 		358C46532B0E0796009966B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 358C46522B0E0796009966B8 /* Assets.xcassets */; };
 		358C46562B0E0796009966B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 358C46542B0E0796009966B8 /* LaunchScreen.storyboard */; };
-		358C466C2B0F132A009966B8 /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358C466B2B0F132A009966B8 /* AnimalDetailViewController.swift */; };
 		358C466E2B0F3926009966B8 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358C466D2B0F3926009966B8 /* SignUpController.swift */; };
-		358C46732B0F7B6C009966B8 /* AccountCheckingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358C46722B0F7B6C009966B8 /* AccountCheckingController.swift */; };
 		35E73E1C2B380E350085E481 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E73E1B2B380E350085E481 /* LoginScreen.swift */; };
 		35E73E1E2B3810200085E481 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E73E1D2B3810200085E481 /* HomeController.swift */; };
 		35EC63F42B382A7100405D00 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC63F32B382A7100405D00 /* UIViewController+Extension.swift */; };
@@ -41,9 +39,7 @@
 		358C46522B0E0796009966B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		358C46552B0E0796009966B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		358C46572B0E0796009966B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		358C466B2B0F132A009966B8 /* AnimalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewController.swift; sourceTree = "<group>"; };
 		358C466D2B0F3926009966B8 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
-		358C46722B0F7B6C009966B8 /* AccountCheckingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCheckingController.swift; sourceTree = "<group>"; };
 		35E73E1B2B380E350085E481 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		35E73E1D2B3810200085E481 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		35EC63F32B382A7100405D00 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -107,24 +103,11 @@
 				359322D02B3ABF8C00C40FA2 /* Configuration */,
 				35EC63F22B382A4E00405D00 /* Extension */,
 				35EC63F02B38288A00405D00 /* Module */,
-				358C46712B0F5A6D009966B8 /* Controller */,
 				3542D1882B37F4E6008F6E3D /* Resources */,
 				358C46572B0E0796009966B8 /* Info.plist */,
 				35EC64062B3A9A5900405D00 /* GoogleService-Info.plist */,
 			);
 			path = fbLoginPage;
-			sourceTree = "<group>";
-		};
-		358C46712B0F5A6D009966B8 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				358C466B2B0F132A009966B8 /* AnimalDetailViewController.swift */,
-				358C46722B0F7B6C009966B8 /* AccountCheckingController.swift */,
-				35E73E1D2B3810200085E481 /* HomeController.swift */,
-				35EC64022B3933EF00405D00 /* TabBarController.swift */,
-				35EC64042B39364600405D00 /* VideoController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		359322D02B3ABF8C00C40FA2 /* Configuration */ = {
@@ -135,12 +118,23 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		359322D12B3AD35000C40FA2 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				35EC64022B3933EF00405D00 /* TabBarController.swift */,
+				35E73E1D2B3810200085E481 /* HomeController.swift */,
+				35EC64042B39364600405D00 /* VideoController.swift */,
+			);
+			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
 		35EC63F02B38288A00405D00 /* Module */ = {
 			isa = PBXGroup;
 			children = (
 				35EC63FB2B383E6700405D00 /* ForgetPassword */,
 				35EC63F52B382B7900405D00 /* SignUp */,
 				35EC63F12B38289900405D00 /* login */,
+				359322D12B3AD35000C40FA2 /* TabBarControllers */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -320,13 +314,11 @@
 				35EC64032B3933EF00405D00 /* TabBarController.swift in Sources */,
 				35EC63F42B382A7100405D00 /* UIViewController+Extension.swift in Sources */,
 				358C466E2B0F3926009966B8 /* SignUpController.swift in Sources */,
-				358C466C2B0F132A009966B8 /* AnimalDetailViewController.swift in Sources */,
 				358C464A2B0E0794009966B8 /* AppDelegate.swift in Sources */,
 				35EC63FA2B38335400405D00 /* TextField.swift in Sources */,
 				35EC63FF2B38408300405D00 /* SignUpViewModel.swift in Sources */,
 				35E73E1E2B3810200085E481 /* HomeController.swift in Sources */,
 				35E73E1C2B380E350085E481 /* LoginScreen.swift in Sources */,
-				358C46732B0F7B6C009966B8 /* AccountCheckingController.swift in Sources */,
 				35EC64092B3AA13100405D00 /* Configuration.swift in Sources */,
 				3542D18D2B37F5D5008F6E3D /* LoginViewModel.swift in Sources */,
 				35EC64012B3840AB00405D00 /* ForgetPasswordScreen.swift in Sources */,
