@@ -2,10 +2,15 @@
 # platform :ios, '9.0'
 
 target 'fbLoginPage' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+  	# Comment the next line if you don't want to use dynamic frameworks
+  	use_frameworks!
 
-  pod "LBTAComponents"
-  pod "LBTATools"  
+  	pod "LBTAComponents"
+  	pod "LBTATools"  
+
+	# For example, to use Firebase Authentication and Cloud Firestore
+	pod 'Firebase/Auth'
+	pod 'Firebase/Core'
+	pod 'FirebaseFirestore'
 
 end

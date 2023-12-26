@@ -1,10 +1,11 @@
 import UIKit
+import FirebaseAuth
 
 class LoginController: UIViewController{
     
     private let viewModel = LoginViewModel()
     
-    lazy var screen = LoginView()
+    lazy var screen = LoginScreen()
     
     
     override func loadView() {
@@ -21,6 +22,17 @@ class LoginController: UIViewController{
         screen.createButton.addTarget(self, action: #selector(createButtonTapped), for: .touchUpInside)
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+    }
+    
     @objc func loginButtonTapped(_ sender: UIButton) {
         viewModel.email = screen.emailTextField.text ?? ""
         viewModel.password = screen.passwordTextField.text ?? ""
@@ -30,13 +42,18 @@ class LoginController: UIViewController{
             showAlert(message: error)
             return
         }
-        if viewModel.checkLogin() {
-            let homeVC = HomeController()
-            navigationController?.pushViewController(homeVC, animated: true)
-        } else {
-            showAlert(message: "Incorrect email or password.")
+
+        viewModel.authenticate { [weak self] result in
+            guard let strongSelf = self else { return }
+            
+            switch result {
+            case .success:
+                let tabBarController = TabBarController()
+                strongSelf.navigationController?.pushViewController(tabBarController, animated: true)
+            case .failure(let error):
+                strongSelf.showAlert(message: "Login failed. \(error.localizedDescription)")
+            }
         }
-        
     }
     
     @objc func forgetButtonTapped() {
