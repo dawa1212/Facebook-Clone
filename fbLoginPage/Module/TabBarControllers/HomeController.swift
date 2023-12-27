@@ -34,7 +34,7 @@ class HomeController: UIViewController {
                                                UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"),
                                                                style: .plain,
                                                                target: self, action: #selector(didTapMagnifyButton))]
-
+        
         prepareLayout()
         
         
@@ -82,8 +82,24 @@ class HomeController: UIViewController {
     }
     
     @objc private func didTapSignOut() {
-        let loginVc = LoginController()
-        navigationController?.tabBarController?.navigationController?.setViewControllers([loginVc], animated: true)
+        showAlertLogout(
+            message: "Do you want to logout?",
+            confirmTitle: "Logout",
+            cancelTitle: "Cancel"
+        ) { [weak self] in
+            guard let strongSelf = self else { return }
+            
+            AuthenticationService.shared.signOut { result in
+                switch result {
+                case .success:
+                    let loginVc = LoginController()
+                    
+                    strongSelf.navigationController?.tabBarController?.navigationController?.setViewControllers([loginVc], animated: true)
+                case .failure(let error):
+                    strongSelf.showAlert(message: "Logout failed. \(error.localizedDescription)")
+                }
+            }
+        }
     }
     
     @objc private func didTapMessageButton() {
