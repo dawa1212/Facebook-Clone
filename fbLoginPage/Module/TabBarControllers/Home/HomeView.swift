@@ -19,6 +19,7 @@ class FirstSimpleStackCell: UICollectionViewCell {
         imageView.layer.cornerRadius = 10
         imageView.backgroundColor = .systemGray5
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
         return imageView
     }()
     
@@ -78,6 +79,16 @@ class FirstSimpleStackCell: UICollectionViewCell {
         button.titleLabel?.font = .systemFont(ofSize: 14)
         return button
     }()
+    
+    private lazy var buttonStack: UIStackView = {
+        let view = UIStackView(arrangedSubviews: [likeButton, commentButton, messageButton, shareButton])
+        view.distribution = .fillEqually
+        view.spacing = 8
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -89,50 +100,46 @@ class FirstSimpleStackCell: UICollectionViewCell {
     }
     
     private func setupViews() {
-        addSubview(circularImageView)
-        addSubview(imageView)
-        addSubview(nameLabel)
-        addSubview(descriptionLabel)
-        addSubview(likeButton)
-        addSubview(commentButton)
-        addSubview(messageButton)
-        addSubview(shareButton)
-        
-        
+        contentView.addSubview(circularImageView)
+        contentView.addSubview(nameLabel)
+        contentView.addSubview(descriptionLabel)
+        contentView.addSubview(imageView)
+        contentView.addSubview(buttonStack)
+
+
         NSLayoutConstraint.activate([
-            circularImageView.topAnchor.constraint(equalTo: topAnchor, constant: 3),
-            circularImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            circularImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 3),
+            circularImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             circularImageView.widthAnchor.constraint(equalToConstant: 40),
             circularImageView.heightAnchor.constraint(equalToConstant: 40),
-            
-            nameLabel.topAnchor.constraint(equalTo: topAnchor),
+
+            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
             nameLabel.leadingAnchor.constraint(equalTo: circularImageView.trailingAnchor, constant: 8),
             nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            
+
             descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 6),
             descriptionLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
             descriptionLabel.trailingAnchor.constraint(equalTo: nameLabel.trailingAnchor),
-            
-            imageView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 8),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+
+            imageView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 10),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             imageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5), // Half the width
-            
+
             // Buttons
-            likeButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10),
-            likeButton.leadingAnchor.constraint(equalTo: leadingAnchor),
-            
-            commentButton.topAnchor.constraint(equalTo: likeButton.topAnchor),
-            commentButton.leadingAnchor.constraint(equalTo: likeButton.trailingAnchor, constant: 40),
-            
-            messageButton.topAnchor.constraint(equalTo: likeButton.topAnchor),
-            messageButton.leadingAnchor.constraint(equalTo: commentButton.trailingAnchor, constant: 40),
-            
-            shareButton.topAnchor.constraint(equalTo: likeButton.topAnchor),
-            shareButton.leadingAnchor.constraint(equalTo: messageButton.trailingAnchor, constant: 40)
+            buttonStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            buttonStack.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10),
+            buttonStack.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            buttonStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+
         ])
         
+        likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
+        commentButton.addTarget(self, action: #selector(commentButtonTapped), for: .touchUpInside)
+        messageButton.addTarget(self, action: #selector(sendButtonTapped), for: .touchUpInside)
+        shareButton.addTarget(self, action: #selector(shareButtonTapped), for: .touchUpInside)
     }
+
     
     func configure(with name: String, imageName: String) {
         nameLabel.text = name
@@ -141,6 +148,28 @@ class FirstSimpleStackCell: UICollectionViewCell {
         descriptionLabel.text = "\(name) has updated his profile"
     }
     
-        
+       
+    
+    @objc private func likeButtonTapped() {
+        print("like button tapped")
+    }
+    
+    @objc private func commentButtonTapped() {
+        // Handle comment button tap
+        print("Comment button tapped")
+    }
+    
+    @objc private func sendButtonTapped() {
+        // Handle send button tap
+        print("Send button tapped")
+    }
+    
+    @objc private func shareButtonTapped() {
+        // Handle share button tap
+        print("Share button tapped")
+    }
 }
 
+#Preview {
+    HomeController()
+}
