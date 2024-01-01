@@ -1,7 +1,7 @@
-// PopularCell.swift
+
 import UIKit
 
-class PopularCell: UICollectionViewCell {
+class FirstLayoutCollectionCustomCell: UICollectionViewCell {
     
     static let reuseIdentifier = "PopularCell"
     

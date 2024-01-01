@@ -7,8 +7,8 @@ class HomeController: UIViewController, UICollectionViewDataSource {
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createCompositionalLayout())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(PopularCell.self, forCellWithReuseIdentifier: PopularCell.reuseIdentifier)
-        collectionView.register(FirstSimpleStackCell.self, forCellWithReuseIdentifier: "FirstSimpleStackCell")
+        collectionView.register(FirstLayoutCollectionCustomCell.self, forCellWithReuseIdentifier: FirstLayoutCollectionCustomCell.reuseIdentifier)
+        collectionView.register(SecondLayoutCollectionCustomCell.self, forCellWithReuseIdentifier: "FirstSimpleStackCell")
         collectionView.dataSource = self
         return collectionView
     }()
@@ -28,11 +28,6 @@ class HomeController: UIViewController, UICollectionViewDataSource {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: label)
         
-        let logout = UIBarButtonItem(image: UIImage(systemName: "rectangle.portrait.and.arrow.right"),
-                                     style: .plain,
-                                     target: self,
-                                     action: #selector(didTapSignOut))
-        
         navigationItem.rightBarButtonItems = [ UIBarButtonItem(image: UIImage(systemName: "rectangle.portrait.and.arrow.right"),
                                                                style: .plain,
                                                                target: self,
@@ -51,7 +46,7 @@ class HomeController: UIViewController, UICollectionViewDataSource {
     }
     
     func registerCells() {
-        collectionView.register(FirstSimpleStackCell.self, forCellWithReuseIdentifier: firstCellId)
+        collectionView.register(SecondLayoutCollectionCustomCell.self, forCellWithReuseIdentifier: firstCellId)
     }
     
     private func prepareLayout() {
@@ -107,7 +102,7 @@ class HomeController: UIViewController, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCell.reuseIdentifier, for: indexPath) as! PopularCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FirstLayoutCollectionCustomCell.reuseIdentifier, for: indexPath) as! FirstLayoutCollectionCustomCell
             // Configure the cell with data
             
             let imageName = imageNames[indexPath.item] // Replace with the actual image name or URL
@@ -115,7 +110,7 @@ class HomeController: UIViewController, UICollectionViewDataSource {
             
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FirstSimpleStackCell", for: indexPath) as! FirstSimpleStackCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FirstSimpleStackCell", for: indexPath) as! SecondLayoutCollectionCustomCell
             // Configure the cell with data
             
             // For demonstration purposes, let's set a placeholder name and image
