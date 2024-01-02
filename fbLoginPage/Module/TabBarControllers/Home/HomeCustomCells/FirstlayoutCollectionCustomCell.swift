@@ -1,9 +1,9 @@
 
 import UIKit
 
-class FirstLayoutCollectionCustomCell: UICollectionViewCell {
+class FirstlayoutCollectionCustomCell: UICollectionViewCell {
     
-    static let reuseIdentifier = "PopularCell"
+    static let reuseIdentifier = "FirstlayoutCollectionCustomCell"
     
     private let contentImageView: UIImageView = {
         let imageView = UIImageView()
