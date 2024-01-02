@@ -5,60 +5,25 @@
 //  Created by Dawa Pakhrin on 01/01/2024.
 //
 
-import LBTATools
+
+
 import UIKit
 
-class ProfileController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ProfileController: UIViewController {
     
-    let collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .systemGray6
-        return collectionView
-    }()
-    
-    let titleMenu: UILabel = {
-        let title = UILabel()
-        title.text = "Menu"
-        title.font = .boldSystemFont(ofSize: 32)
-        return title
-    }()
-    
-    let firstCellId = "FirstSimpleStackCell"
-    let secondCellId = "SecondSimpleStackCell"
-    let thirdCellId = "ThirdSimpleStackCell"
-    
-    let icons: [UIImage] = [
-        UIImage(systemName: "bookmark")!,
-        UIImage(systemName: "person.2.square.stack")!,
-        UIImage(systemName: "book")!,
-        UIImage(systemName: "clock")!,
-        UIImage(systemName: "film")!,
-        UIImage(systemName: "bag")!,
-        UIImage(systemName: "person.3")!,
-        UIImage(systemName: "newspaper")!
-    ]
-    
-    let containerTitles = [
-        "Saved",
-        "Groups",
-        "Pages",
-        "Memories",
-        "Video",
-        "Marketplace",
-        "Find Friends",
-        "Feeds"
-    ]
+    let profileView = ProfileView()
+    let viewModel = ProfileViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set the titleView to be an empty UIView to avoid conflicts with leftBarButtonItem
+        setupNavigationBar()
+        setupCollectionView()
+        registerCells()
+    }
+    
+    private func setupNavigationBar() {
         navigationItem.titleView = UIView()
-        
-        // Set the titleMenu as the left bar button item
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: titleMenu)
-        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileView.titleMenu)
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"),
                             style: .plain,
@@ -68,40 +33,39 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
                             style: .plain,
                             target: self, action: #selector(didTapMessageButton)),
         ]
+    }
+    
+    private func setupCollectionView() {
+        view.addSubview(profileView)
+        profileView.collectionView.delegate = self
+        profileView.collectionView.dataSource = self
         
-        
-        setupCollectionView()
-        registerCells()
+        // Add constraints for the profileView (using Auto Layout)
+        profileView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            profileView.topAnchor.constraint(equalTo: view.topAnchor),
+            profileView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            profileView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            profileView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+    
+    private func registerCells() {
+        profileView.collectionView.register(ProfileCollectionCell.self, forCellWithReuseIdentifier: profileView.firstCellId)
+        profileView.collectionView.register(ProfileCollectionCell2.self, forCellWithReuseIdentifier: profileView.secondCellId)
+        profileView.collectionView.register(ProfileCollectionCell3.self, forCellWithReuseIdentifier: profileView.thirdCellId)
     }
     
     @objc func didTapMessageButton() {
-        
+        // Handle message button tap
     }
     
     @objc func didTapMagnifyButton() {
-        
-        
+        // Handle magnifying glass button tap
     }
-    
-    func setupCollectionView() {
-        view.addSubview(collectionView)
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.fillSuperview()
-        
-        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.minimumLineSpacing = 10
-        }
-    }
-    
-    func registerCells() {
-        collectionView.register(ProfileCollectionCell.self, forCellWithReuseIdentifier: firstCellId)
-        collectionView.register(ProfileCollectionCell2.self, forCellWithReuseIdentifier: secondCellId)
-        collectionView.register(ProfileCollectionCell3.self, forCellWithReuseIdentifier: thirdCellId)
-        
-    }
-    
-    // MARK: - UICollectionViewDataSource methods
+}
+
+extension ProfileController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
@@ -111,34 +75,28 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
         if section == 0 {
             return 1
         } else if section == 1 {
-            return 8
+            return viewModel.icons.count
         } else {
             return 1
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellId: String
         if indexPath.section == 0 {
-            cellId = firstCellId
+            cellId = profileView.firstCellId
         } else if indexPath.section == 1 {
-            cellId = secondCellId
+            cellId = profileView.secondCellId
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ProfileCollectionCell2
-            let icon = icons[indexPath.item] // Assuming icons is an array of UIImage
-            let title = containerTitles[indexPath.item] // Assuming containerTitles is an array of String
+            let icon = viewModel.icons[indexPath.item]
+            let title = viewModel.containerTitles[indexPath.item]
             cell.configure(with: icon, title: title)
             return cell
         } else {
-            cellId = thirdCellId
+            cellId = profileView.thirdCellId
         }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        return cell
+        return collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
     }
-    
-    
-    
-    // MARK: - UICollectionViewDelegateFlowLayout methods
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .init(top: 10, left: 20, bottom: 16, right: 16)
@@ -157,20 +115,4 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
             return .init(width: view.frame.width - 32, height: 40)
         }
     }
-}
-
-
-extension UIViewController {
-    
-    func pop<V: UIViewController>(type: V.Type) {
-        if let navigationController {
-            if let controller = navigationController.viewControllers.filter( { $0 is V }).first {
-                navigationController.popToViewController(controller, animated: true)
-            }
-        }
-    }
-}
-
-#Preview {
-    ProfileController()
 }

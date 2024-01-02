@@ -22,6 +22,8 @@
 		35DB70552B42DE6E00CBFFC1 /* ProfileCollectionCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB70542B42DE6E00CBFFC1 /* ProfileCollectionCell3.swift */; };
 		35DB70572B42DE9E00CBFFC1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB70562B42DE9E00CBFFC1 /* NotificationController.swift */; };
 		35DB70592B42DEC400CBFFC1 /* AddFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB70582B42DEC400CBFFC1 /* AddFriendController.swift */; };
+		35DB705F2B43D09500CBFFC1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB705E2B43D09500CBFFC1 /* ProfileView.swift */; };
+		35DB70612B43D0A900CBFFC1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DB70602B43D0A900CBFFC1 /* ProfileViewModel.swift */; };
 		35E73E1C2B380E350085E481 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E73E1B2B380E350085E481 /* LoginScreen.swift */; };
 		35E73E1E2B3810200085E481 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E73E1D2B3810200085E481 /* HomeController.swift */; };
 		35EC63F42B382A7100405D00 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC63F32B382A7100405D00 /* UIViewController+Extension.swift */; };
@@ -56,6 +58,8 @@
 		35DB70542B42DE6E00CBFFC1 /* ProfileCollectionCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionCell3.swift; sourceTree = "<group>"; };
 		35DB70562B42DE9E00CBFFC1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		35DB70582B42DEC400CBFFC1 /* AddFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendController.swift; sourceTree = "<group>"; };
+		35DB705E2B43D09500CBFFC1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		35DB70602B43D0A900CBFFC1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		35E73E1B2B380E350085E481 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		35E73E1D2B3810200085E481 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		35EC63F32B382A7100405D00 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 			children = (
 				35DB704F2B42DE1F00CBFFC1 /* ProfileCustomCells */,
 				35DB704D2B42DE1900CBFFC1 /* ProfileController.swift */,
+				35DB705E2B43D09500CBFFC1 /* ProfileView.swift */,
+				35DB70602B43D0A900CBFFC1 /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -396,8 +402,10 @@
 				35EC64032B3933EF00405D00 /* TabBarController.swift in Sources */,
 				35EC63F42B382A7100405D00 /* UIViewController+Extension.swift in Sources */,
 				358C466E2B0F3926009966B8 /* SignUpController.swift in Sources */,
+				35DB705F2B43D09500CBFFC1 /* ProfileView.swift in Sources */,
 				35DB70572B42DE9E00CBFFC1 /* NotificationController.swift in Sources */,
 				354D0D462B3BE6D400FDC681 /* CustomCell1.swift in Sources */,
+				35DB70612B43D0A900CBFFC1 /* ProfileViewModel.swift in Sources */,
 				358C464A2B0E0794009966B8 /* AppDelegate.swift in Sources */,
 				35EC63FA2B38335400405D00 /* TextField.swift in Sources */,
 				35DB70552B42DE6E00CBFFC1 /* ProfileCollectionCell3.swift in Sources */,
