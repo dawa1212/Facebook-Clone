@@ -1,21 +1,9 @@
-
-import Foundation
 import UIKit
 
-class HomeController: UIViewController, UICollectionViewDataSource {
+class HomeController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    private lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createCompositionalLayout())
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(PopularCell.self, forCellWithReuseIdentifier: PopularCell.reuseIdentifier)
-        collectionView.register(FirstSimpleStackCell.self, forCellWithReuseIdentifier: "FirstSimpleStackCell")
-        collectionView.dataSource = self
-        return collectionView
-    }()
-    
-    private let imageNames = ["image1", "image2", "image3", "image4", "image5", "image1", "image2", "image3", "image4", "image5", "image2", "image3", "image4", "image5", "image1", "image2", "image3", "image4", "image5", "image2", "image3", "image4", "image5", "image1", "image2", "image3", "image4", "image5"]
-    
-    let firstCellId = "FirstSimpleStackCell"
+    let homeView = HomeScreen()
+    let viewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +16,6 @@ class HomeController: UIViewController, UICollectionViewDataSource {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: label)
         
-        let logout = UIBarButtonItem(image: UIImage(systemName: "rectangle.portrait.and.arrow.right"),
-                                     style: .plain,
-                                     target: self,
-                                     action: #selector(didTapSignOut))
-        
         navigationItem.rightBarButtonItems = [ UIBarButtonItem(image: UIImage(systemName: "rectangle.portrait.and.arrow.right"),
                                                                style: .plain,
                                                                target: self,
@@ -43,26 +26,27 @@ class HomeController: UIViewController, UICollectionViewDataSource {
                                                UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"),
                                                                style: .plain,
                                                                target: self, action: #selector(didTapMagnifyButton))]
-        
-        prepareLayout()
+        setupUI()
         registerCells()
-        
-        
     }
     
     func registerCells() {
-        collectionView.register(FirstSimpleStackCell.self, forCellWithReuseIdentifier: firstCellId)
+        homeView.collectionView.register(FirstlayoutCollectionCustomCell.self, forCellWithReuseIdentifier: FirstlayoutCollectionCustomCell.reuseIdentifier)
+        homeView.collectionView.register(SecondlayoutCollectionCustomCell.self, forCellWithReuseIdentifier: SecondlayoutCollectionCustomCell.reuseIdentifier)
     }
     
-    private func prepareLayout() {
-        view.addSubview(collectionView)
-        
+    private func setupUI() {
+        view.addSubview(homeView)
+        homeView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            homeView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            homeView.topAnchor.constraint(equalTo: view.topAnchor),
+            homeView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            homeView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+        
+        homeView.collectionView.delegate = self
+        homeView.collectionView.dataSource = self
     }
     
     @objc private func didTapSignOut() {
@@ -94,88 +78,26 @@ class HomeController: UIViewController, UICollectionViewDataSource {
         
     }
     
-    // MARK: - UICollectionViewDataSource
-    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // Return the number of items for each section
-        return imageNames.count
+        return viewModel.imageNames.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCell.reuseIdentifier, for: indexPath) as! PopularCell
-            // Configure the cell with data
-            
-            let imageName = imageNames[indexPath.item] // Replace with the actual image name or URL
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FirstlayoutCollectionCustomCell.reuseIdentifier, for: indexPath) as! FirstlayoutCollectionCustomCell
+            let imageName = viewModel.imageNames[indexPath.item]
             cell.configure(with: imageName)
-            
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FirstSimpleStackCell", for: indexPath) as! FirstSimpleStackCell
-            // Configure the cell with data
-            
-            // For demonstration purposes, let's set a placeholder name and image
-            let imageName = imageNames[indexPath.item]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SecondlayoutCollectionCustomCell.reuseIdentifier, for: indexPath) as! SecondlayoutCollectionCustomCell
+            let imageName = viewModel.imageNames[indexPath.item]
             let name = "Dawa Pakhrin"
             cell.configure(with: name, imageName: imageName)
-            
             return cell
         }
-    }
-    
-    // MARK: - Compositional Layout
-    
-    private func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
-        return UICollectionViewCompositionalLayout { (sectionNumber, _) -> NSCollectionLayoutSection? in
-            switch sectionNumber {
-            case 0: return self.firstLayoutSection()
-            case 1: return self.secondLayoutSection()
-            default:
-                return self.firstLayoutSection()
-            }
-        }
-    }
-    
-    private func firstLayoutSection() -> NSCollectionLayoutSection {
-        // Implement the layout for the first section
-        
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25), heightDimension: .fractionalHeight(0.90))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        // Adjusted content insets for spacing between items
-        item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 16)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.5))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        
-        // Adjusted content insets for spacing between groups
-        // group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 20, trailing: 0)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPaging
-        section.interGroupSpacing = 0
-        section.contentInsets =  NSDirectionalEdgeInsets(top: 0, leading: 15, bottom: 20, trailing: 0)
-        return section
-    }
-    
-    private func secondLayoutSection() -> NSCollectionLayoutSection {
-        // Implement the layout for the second section
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 0, bottom: 15, trailing: 0)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.75))
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-        group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 14, bottom: 0, trailing: 14)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        // section.orthogonalScrollingBehavior = .groupPaging
-        section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-        section.interGroupSpacing = 10 // Spacing between groups
-        
-        return section
     }
 }

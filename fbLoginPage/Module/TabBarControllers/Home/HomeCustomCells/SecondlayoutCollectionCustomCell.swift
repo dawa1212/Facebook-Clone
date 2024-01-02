@@ -1,6 +1,8 @@
 import UIKit
 
-class FirstSimpleStackCell: UICollectionViewCell {
+class SecondlayoutCollectionCustomCell: UICollectionViewCell {
+    
+    static let reuseIdentifier = "SecondlayoutCollectionCustomCell"
     
     let circularImageView: UIImageView = {
         let imageView = UIImageView()
